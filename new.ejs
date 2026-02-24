@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate") %>
+  <div class="row mt-3">
+  <div class="col-8 offset-2" > 
+       <h3>Create New Listing</h3>
+
+      <form  method="POST"  action="/listing"  class="needs-validation" novalidate>
+
+    <div class="mb-2">
+
+        <label for="title" class="form-label">Title</label>
+        <input 
+       
+          name="listing[title]"
+          placeholder="Title" 
+          type="text" 
+          class="form-control "  required>
+        <div class="valid-feedback"> title looks good</div>
+   </div>
+   
+    <div  class="mb-2"> 
+        
+        <label for="description" class="form-label">Description</label>
+        <textarea 
+                  name="listing[description]"
+                  class="form-control" required>
+        </textarea>
+                 <div class="valid-feedback"> description looks good</div>
+    </div>
+
+    <div  class="mb-2">
+
+        <label for="image" class="form-label">Image URL</label>
+        <input 
+               name="listing[image][url]" 
+               placeholder="Image URL" 
+               type="text"
+               class="form-control">
+   </div>
+
+<div class="row">
+
+    <div  class="mb-2 col-md-4">
+
+        <label for="price" class="form-label">Price</label>
+        <input 
+              
+               name="listing[price]" 
+               placeholder="Price"
+               type="number" 
+               class="form-control" required/>
+               <div class="invalid-feedback">Please enter a valid price</div>
+    </div>
+
+    <div  class="mb-2 col-md-6">
+
+        <label for="country" class="form-label">country</label>
+        <input 
+              
+               name="listing[country]" 
+               placeholder="country" 
+               type="text" 
+               class="form-control" required/>
+              <div class="invalid-feedback">Please enter a valid country</div>
+    </div>
+
+</div>
+
+    <div class="mb-2">
+
+        <label for="location" class="form-label">location</label>
+        <input 
+               type="text"
+               name="listing[location]"
+               placeholder="Location" 
+               class="form-control" required/>
+               <div class="invalid-feedback">Please enter a valid location</div>
+
+    </div>
+
+    <button  type="submit" class="button btn-dark add-btn">
+        ADD
+    </button>
+    </form>
+
+
+</div>
+</div>
+ <script src="/css/js/script.js"></script>
